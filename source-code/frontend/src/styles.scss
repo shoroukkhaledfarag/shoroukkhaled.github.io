@@ -1,0 +1,57 @@
+$fontColor:black;
+
+body{
+  background-color: whitesmoke;
+  // height:5000px;
+  width: 100%;
+  min-height: 100vh;
+}
+
+
+/**********************************************************************************************
+
+                                          HEADER CSS
+
+**********************************************************************************************/
+.nav-link{
+  color: $fontColor;
+  font-size: 24px;
+  font-weight: bold;
+}
+.navbar-brand{
+  color: $fontColor;
+  font-size: 40px;
+}
+
+ul {
+  display: flex;
+  align-items: stretch; 
+  justify-content: space-between;
+}
+
+/**********************************************************************************************
+
+                                          PORTIFOLIO CSS
+
+**********************************************************************************************/
+.portifolio-position{
+  padding: 20px;
+  height: 100%;
+  margin-top: 15%;
+}
+
+
+
+/**********************************************************************************************
+
+                                          FOOTER CSS
+
+**********************************************************************************************/
+.footer{
+  position: absolute;
+  left: 0%;
+  bottom: 0%;
+  color: $fontColor;
+  font-size: 14px;
+
+}

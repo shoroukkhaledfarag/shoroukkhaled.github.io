@@ -1,5 +1,8 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { RouterModule } from '@angular/router';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { HttpClientModule } from '@angular/common/http';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -12,6 +15,7 @@ import {ButtonModule} from 'primeng/button';
 import {SplitButtonModule} from 'primeng/splitbutton';
 import { BlogComponent } from './modules/blog/blog.component';
 
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -23,6 +27,9 @@ import { BlogComponent } from './modules/blog/blog.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
+    RouterModule,
+    NgbModule,
+    HttpClientModule,
     NgxPageScrollCoreModule.forRoot({ duration: 1600 }),
     ToolbarModule,
     ButtonModule,

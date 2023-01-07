@@ -1,26 +1,26 @@
-import { DOCUMENT } from '@angular/common';
-import { Component, Inject, OnInit } from '@angular/core';
-import { PageScrollService } from 'ngx-page-scroll-core';
+import { Component, OnInit } from '@angular/core';
+import { Bio } from 'src/app/shared/models/bio';
 
 @Component({
   selector: 'app-portifolio',
   templateUrl: './portifolio.component.html',
-  styleUrls: ['./portifolio.component.sass']
+  styleUrls: ['./portifolio.component.scss']
 })
-export class PortifolioComponent implements OnInit {
-  activeSection = 1;
-  constructor(
-    private pageScrollService: PageScrollService,
-    @Inject(DOCUMENT) private document: any
-  ) {}
-  ngOnInit(): void {
-    throw new Error('Method not implemented.');
+export class PortifolioComponent{
+  bio :Bio = {
+    firstName : "shorouk",
+    lastName : "khaled",
+    about :["dd"],
+    intro: ["I'm a Software Developer , I always try to improve and be of greater value.",
+    "I also love Formula 1 and playing all kinds of sports"]
+
   }
-  fullPageScroll(e: HTMLElement, i:any) {
-    this.pageScrollService.scroll({
-      scrollTarget: e,
-      document: this.document,
-    });
-    this.activeSection = i;
+
+  respOptions = [
+    { viewClasses: 'd-none d-md-flex', headingClass: 'display-3', useSmallerHeadings: false },
+    { viewClasses: 'd-flex d-md-none', headingClass: '', useSmallerHeadings: true }
+  ];
+
+  constructor() { 
   }
 }

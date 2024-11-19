@@ -9,11 +9,11 @@ import { AppComponent } from './app.component';
 import { FooterComponent } from './shared/footer/footer.component';
 import { HeaderComponent } from './shared/header/header.component';
 import { NgxPageScrollCoreModule } from 'ngx-page-scroll-core';
-import { PortifolioComponent } from './modules/portifolio/portifolio.component';
 import { ToolbarModule } from 'primeng/toolbar';
 import {ButtonModule} from 'primeng/button';
 import {SplitButtonModule} from 'primeng/splitbutton';
 import { BlogComponent } from './modules/blog/blog.component';
+import { PortifolioComponent } from './modules/home/portifolio.component';
 
 
 @NgModule({

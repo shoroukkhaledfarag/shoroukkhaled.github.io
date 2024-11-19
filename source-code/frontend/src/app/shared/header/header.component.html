@@ -1,22 +1,49 @@
-<nav class="navbar navbar-expand-lg navbar-wheat bg-wheat ">
-    <a class="navbar-brand"  href=""><b>ShorouK</b>haled</a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
-      <ul class="navbar-nav" >
-        <li class="nav-item active">
-          <a class="nav-link"  href="#Home">Home</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#AboutMe">About Me</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#Projects">Projects</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#Blog">Blog</a>
-        </li>
-      </ul>
+<nav id="header" class="navbar navbar-expand-lg navbar-wheat bg-wheat ">
+
+  <a class="navbar-brand" href=""><b>ShorouK</b>haled</a>
+
+  <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+    <ul class="navbar-nav">
+      <a class="nav-link" mat-button *ngFor="let section of ['home', 'about', 'projects', 'contact']"
+        [class.active]="activeSection === section" (click)="scrollTo(section)">
+        {{ section | titlecase }}
+      </a>
+
+    </ul>
+  </div>
+
+  <button class="menu-btn" mat-button (click)="toggleMenu()" *ngIf="isResponsive">
+    ☰
+  </button>
+
+  <div class="side-menu" [class.open]="menuOpen" [style.display]="menuOpen ? 'block' : 'none'">
+    <div class="menu-header">
+      <button class="close-btn" (click)="toggleMenu()">×</button>
     </div>
-  </nav>
+    <div class="menu-content">
+      <a (click)="scrollTo('home')">Home</a>
+      <a (click)="scrollTo('about')">About</a>
+      <a (click)="scrollTo('projects')">Projects</a>
+      <a (click)="scrollTo('contact')">Contact</a>
+    </div>
+  </div>
+
+</nav>
+
+
+
+<div id="home" class="section">
+  <app-home></app-home>
+</div>
+<div id="about" class="section">
+  <app-home></app-home>
+</div>
+<div id="projects" class="section">
+  <app-home></app-home>
+</div>
+<div id="blog" class="section">
+  <app-blog></app-blog>
+</div>
+<div id="contact" class="section">
+  <app-home></app-home>
+</div>

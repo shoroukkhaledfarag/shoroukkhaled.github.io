@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Bio } from 'src/app/shared/models/bio';
 
 @Component({
-  selector: 'app-portifolio',
+  selector: 'app-home',
   templateUrl: './portifolio.component.html',
   styleUrls: ['./portifolio.component.scss']
 })
@@ -11,8 +11,7 @@ export class PortifolioComponent{
     firstName : "shorouk",
     lastName : "khaled",
     about :["dd"],
-    intro: ["I'm a Software Developer , I always try to improve and be of greater value.",
-    "I also love Formula 1 and playing all kinds of sports"]
+    intro: ["I’m a Senior Software Engineer dedicated to continuous learning and delivering impactful solutions."]
 
   }
 
